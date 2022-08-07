@@ -4,6 +4,7 @@ import "./App.css";
 export default function App() {
   return (
     <div>
+      <h1>Weather app</h1>
       <footer>
         This project was coded by{" "}
         <a href="https://golden-pasca-71ada2.netlify.app/" target="_blank">
