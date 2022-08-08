@@ -4,8 +4,10 @@ import Weather from "./Weather";
 
 export default function App() {
   return (
-    <div className="container">
-      <Weather />
+    <div className="app">
+      <div className="container weather-app">
+        <Weather />
+      </div>
       <footer>
         This project was coded by{" "}
         <a href="https://golden-pasca-71ada2.netlify.app/" target="_blank" rel="noopener noreferrer">
