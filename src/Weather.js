@@ -8,7 +8,11 @@ export default function Weather() {
       <form>
         <div className="row">
           <div className="col-1">
-            <a href=".">📍</a>
+            <a href=".">
+              <span role="img" aria-label="pin">
+                📍
+              </span>
+            </a>
           </div>
           <div className="col-8">
             <input type="search" placeholder="Enter a city" className="search-city" autoFocus="on" />
