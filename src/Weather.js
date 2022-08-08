@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import "./index.css";
 
 export default function Weather() {
   return (
@@ -10,7 +11,7 @@ export default function Weather() {
             <a href=".">📍</a>
           </div>
           <div className="col-8">
-            <input type="search" placeholder="Enter a city" className="search-city" />
+            <input type="search" placeholder="Enter a city" className="search-city" autoFocus="on" />
           </div>
           <div className="col-3">
             <input type="submit" value="Search" className="search-button" />
@@ -24,9 +25,10 @@ export default function Weather() {
           <img alt="Nublado" src="//ssl.gstatic.com/onebox/weather/64/cloudy.png" id="wob_tci" />
         </div>
         <div className="col-3">
-          <h2>22° C|F</h2>
+          <span className="temperature">22</span>
+          <span className="unit">°C|F</span>
         </div>
-        <div className="col-6">
+        <div className="col-6 description">
           <ul>
             <li>Humidity: 10%</li>
             <li>Wind: 10 km/h</li>

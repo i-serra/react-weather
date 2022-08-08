@@ -1,3 +1,7 @@
+.Weather h1 {
+  font-size: 60px;
+}
+
 .Weather a {
   text-decoration: none;
   padding-left: 10px;
@@ -5,13 +9,11 @@
 }
 
 .Weather .search-city {
-  padding: 6px 0px 6px 15px;
+  padding: 6px 150px 6px 15px;
   border: 1px solid #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
-  color: #fff;
   font-size: 20px;
-  padding-right: 180px;
 }
 
 .Weather .search-button {
@@ -28,6 +30,36 @@
   text-align: center;
   padding-top: 30px;
   padding-bottom: 0;
+  font-size: 20px;
+}
+
+.Weather img {
+  width: 105px;
+}
+
+.Weather .temperature {
+  font-size: 90px;
+  position: relative;
+  bottom: 21px;
+  right: 50px;
+}
+
+.Weather .unit {
+  position: relative;
+  font-size: 26px;
+  font-weight: bold;
+  bottom: 60px;
+  right: 42px;
+}
+
+.Weather li {
+  list-style: none;
+  font-size: 20px;
+}
+
+.Weather .search-city:hover {
+  background-color: plum;
+  transition: all 250ms ease-in-out;
 }
 
 @media (max-width: 600px) {
@@ -36,10 +68,10 @@
   }
 
   .Weather .search-city {
-    padding-right: 70px;
+    padding-right: 50px;
   }
 
   .Weather .search-button {
-    margin-left: -10px;
+    padding: 6px;
   }
 }
