@@ -26,10 +26,12 @@
   padding: 6px 20px;
 }
 
+.Weather hr {
+  width: 600px;
+}
+
 .Weather h6 {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 0;
   font-size: 20px;
 }
 
