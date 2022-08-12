@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import "./index.css";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function showResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Monday | 07/08 | 16:39",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       icon: "//ssl.gstatic.com/onebox/weather/64/cloudy.png",
       description: response.data.weather[0].description,
@@ -40,7 +42,9 @@ export default function Weather(props) {
           </div>
         </form>
         <hr />
-        <h6>{weatherData.date}</h6>
+        <h6>
+          <FormattedDate date={weatherData.date} />
+        </h6>
         <hr />
         <h1>{weatherData.city}</h1>
         <div className="row">
