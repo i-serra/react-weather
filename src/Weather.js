@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import "./index.css";
-import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function showResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -41,28 +40,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <hr />
-        <h6>
-          <FormattedDate date={weatherData.date} />
-        </h6>
-        <hr />
-        <h1>{weatherData.city}</h1>
-        <div className="row">
-          <div className="col-3">
-            <img alt={weatherData.description} src={weatherData.icon} />
-          </div>
-          <div className="col-3">
-            <span className="temperature">{Math.round(weatherData.temperature)}</span>
-            <span className="unit">°C|F</span>
-          </div>
-          <div className="col-6 description">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {Math.round(weatherData.wind)} km/h</li>
-              <li className="text-capitalize">Description: {weatherData.description}</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
