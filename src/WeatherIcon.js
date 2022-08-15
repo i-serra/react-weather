@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
     "11d": "THUNDER",
     "11n": "THUNDER",
     "13d": "SNOW",
-    "13": "SNOW",
+    "13n": "SNOW",
     "50d": "FOG",
     "50n": "FOG",
   };
