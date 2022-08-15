@@ -15,7 +15,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
-      icon: "//ssl.gstatic.com/onebox/weather/64/cloudy.png",
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
     });
@@ -63,6 +63,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <ThreeDots color="#00BFFF" height={80} width={80} className="loader" />;
+    return <ThreeDots color="purple" height={100} width={100} className="loader" />;
   }
 }
