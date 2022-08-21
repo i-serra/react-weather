@@ -1,19 +1,23 @@
 .Weather h1 {
   font-size: 60px;
+  margin-top: -22px;
 }
 
-.Weather a {
+.Weather .pin {
   text-decoration: none;
   padding-left: 10px;
   font-size: 30px;
+  margin-top: -12px;
+  position: fixed;
 }
 
 .Weather .search-city {
-  padding: 6px 150px 6px 15px;
+  margin-top: -12px;
   border: 1px solid #fff;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
   font-size: 20px;
+  background-color: rgb(0 0 0 / 5%);
+  color: #fff;
 }
 
 .Weather .search-button {
@@ -22,8 +26,9 @@
   box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
   color: #fff;
   font-size: 20px;
-  background-color: plum;
+  background-color: #8c694f;
   padding: 6px 20px;
+  margin-top: -12px;
 }
 
 .Weather hr {
@@ -37,6 +42,7 @@
 
 .Weather canvas {
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .Weather .temperature {
@@ -69,8 +75,9 @@
 }
 
 .Weather .search-city:hover {
-  background-color: plum;
+  background-color: #fff;
   transition: all 250ms ease-in-out;
+  border: 1px solid #8c694f;
 }
 
 @media (max-width: 600px) {

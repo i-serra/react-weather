@@ -1,8 +1,9 @@
 .app .weather-app {
-  background-color: rgb(214, 182, 208);
+  background-image:  url("https://images.unsplash.com/photo-1550710901-bb7411e532b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: cover;
   padding: 50px 0px 30px 20px;
-  margin: 30px auto;
-  border: 3px solid plum;
+  margin: 15px auto;
+  border: 3px solid #8c694f;
   border-radius: 4px;
   max-width: 650px;
   font-family: "Cutive Mono", monospace;
@@ -10,7 +11,7 @@
 }
 
 .app footer {
-  margin: -20px 0px 0px 395px;
+  margin: -15px 0px 0px 395px;
   font-size: 15px;
   font-family: "Cutive Mono", monospace;
 }

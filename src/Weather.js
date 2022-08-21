@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Weather.css";
 import "./index.css";
 import axios from "axios";
-import { ThreeDots } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 
@@ -12,6 +11,7 @@ export default function Weather(props) {
   function showResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -46,13 +46,13 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-1">
               <a href=".">
-                <span role="img" aria-label="pin">
+                <span className="pin" role="img" aria-label="pin">
                   📍
                 </span>
               </a>
             </div>
             <div className="col-8">
-              <input type="search" placeholder="Enter a city" className="search-city" autoFocus="on" onChange={handdleCitySearch} />
+              <input type="search" placeholder="Enter a city" className="search-city form-control" autoFocus="on" onChange={handdleCitySearch} />
             </div>
             <div className="col-3">
               <input type="submit" value="Search" className="search-button" />
@@ -60,11 +60,11 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
     search();
-    return <ThreeDots color="purple" height={100} width={100} className="loader" />;
+    return <div>Loading...</div>;
   }
 }
