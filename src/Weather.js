@@ -60,6 +60,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <hr className="line"/>
         <Forecast coordinates={weatherData.coordinates} />
       </div>
     );

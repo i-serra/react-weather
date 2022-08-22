@@ -1,0 +1,24 @@
+.ForecastDay {
+  text-align: center;
+}
+
+.column {
+  border: #fff 1px solid;
+  border-radius: 5px;
+  background-color: rgb(0 0 0 / 8%);
+  margin-right: 20px;
+}
+
+.ForecastDay .Forecast-day {
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.ForecastDay .Forecast-temp-min {
+  opacity: 0.8;
+  margin: 4px;
+}
+
+.ForecastDay .Forecast-temp {
+  margin-bottom: 10px;
+}
